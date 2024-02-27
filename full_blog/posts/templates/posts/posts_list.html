@@ -6,9 +6,9 @@
 {% block content %}
     <section>
         {% comment %} <h2>Posts, using <span class="dja_color">Django</span></h2> {% endcomment %}
-        {% for post in posts %}
+        {%for post in posts%}
             <p>{{ post.title }}</p>
-            <p>{{ post.date }}</p>
+            <p>{{ post.time|date:"Y-m-d" }}</p>
             <p>{{ post.body }}</p>
         {% endfor %}
     </section>
