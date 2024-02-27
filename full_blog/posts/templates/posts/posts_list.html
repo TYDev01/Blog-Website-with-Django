@@ -4,5 +4,12 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Posts, using <span class="dja_color">Django</span></h2>
+    <section>
+        {% comment %} <h2>Posts, using <span class="dja_color">Django</span></h2> {% endcomment %}
+        {% for post in posts %}
+            <p>{{ post.title }}</p>
+            <p>{{ post.date }}</p>
+            <p>{{ post.body }}</p>
+        {% endfor %}
+    </section>
 {% endblock %}
